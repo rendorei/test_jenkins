@@ -21,7 +21,7 @@ pipeline {
       
         stage("Second step") {
             steps {
-                sh 'ssh root@slave \'uptime\''
+                sh 'ssh root@slave \'date\''
             }
         }
     }
