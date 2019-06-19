@@ -2,9 +2,7 @@
 // Check slave properties
 properties([disableConcurrentBuilds()])
 
-pipeline {
-    
-    
+pipeline {       
     agent { 
         label 'master'
         }
