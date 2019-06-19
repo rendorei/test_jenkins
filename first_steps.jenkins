@@ -13,13 +13,13 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh alex@slave \'hostname\''
+                sh 'ssh root@slave \'hostname\''
             }
         }     
       
         stage("Second step") {
             steps {
-                sh 'ssh alex@slave \'date\''
+                sh 'ssh root@slave \'date\''
             }
         }
     }
