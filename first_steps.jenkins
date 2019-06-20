@@ -6,6 +6,9 @@ pipeline {
     agent { 
         label 'master'
         }
+        triggers { 
+            pollSCM('* * * * *')
+             }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
@@ -13,15 +16,9 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh root@slave \'hostname\''
-            }
-        }     
-      
-        stage("Second step") {
-            steps {
                 sh 'ssh root@slave \'date\''
             }
-        }
+        }        
     }
        
 }
