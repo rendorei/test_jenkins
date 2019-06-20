@@ -17,6 +17,7 @@ pipeline {
         stage("First step") {
             steps {
                 sh 'ssh root@slave \'date\''
+                sh 'ssh root@slave \'echo "hello, world"\''
             }
             
         }    
