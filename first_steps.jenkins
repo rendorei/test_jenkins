@@ -24,6 +24,7 @@ pipeline {
         stage("Second step") {
             steps {
                 sh 'ssh root@slave \'pwd\''
+                sh 'ssh root@slave \'mkdir testdir\''
             }
             
         }           
