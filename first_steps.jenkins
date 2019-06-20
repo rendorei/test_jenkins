@@ -18,7 +18,14 @@ pipeline {
             steps {
                 sh 'ssh root@slave \'date\''
             }
-        }        
+            
+        }    
+        stage("Second step") {
+            steps {
+                sh 'ssh root@slave \'pwd\''
+            }
+            
+        }           
     }
        
 }
